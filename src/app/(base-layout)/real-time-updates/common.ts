@@ -8,10 +8,13 @@ import { graphql } from '@/lib/datocms/graphql';
  * Define here the props that the page component will receive from Next.js
  * https://nextjs.org/docs/app/api-reference/file-conventions/page#props
  */
-export interface PageProps {
-  params: Promise<any>;
-}
-
+export type PageProps = {
+  /*
+   * If, as in this case, the page does not have dynamic route parameters, just
+   * define the type in this way:
+   */
+  params: Record<never, never>;
+};
 
 /**
  * The GraphQL query that will be executed for this route to generate the page

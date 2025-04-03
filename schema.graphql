@@ -297,8 +297,8 @@ input FrettModelFilter {
   _status: StatusFilter
   _updatedAt: UpdatedAtFilter
   _isValid: BooleanFilter
-  frett: LinkFilter
-  fyrirsogn: StringFilter
+  frettaheader: LinkFilter
+  frettaheiti: StringFilter
   innihaldfrettar: TextFilter
   OR: [FrettModelFilter]
   AND: [FrettModelFilter]
@@ -323,8 +323,8 @@ enum FrettModelOrderBy {
   _updatedAt_DESC
   _isValid_ASC
   _isValid_DESC
-  fyrirsogn_ASC
-  fyrirsogn_DESC
+  frettaheiti_ASC
+  frettaheiti_DESC
 }
 
 """Record of type Frett (frett)"""
@@ -347,8 +347,8 @@ type FrettRecord implements RecordInterface {
   _status: ItemStatus!
   _unpublishingScheduledAt: DateTime
   _updatedAt: DateTime!
-  frett: FrettaheaderRecord!
-  fyrirsogn: String!
+  frettaheader: FrettaheaderRecord!
+  frettaheiti: String!
   id: ItemId!
   innihaldfrettar(
     """Process content as markdown"""

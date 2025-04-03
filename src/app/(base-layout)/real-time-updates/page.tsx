@@ -35,10 +35,10 @@ const { generateMetadataFn, Page } = generatePageComponentAndMetadataFn({
   // If the GraphQL query requires some variables, you can use this function to
   // fill in the values, starting from the route parameters
   buildQueryVariables: ({ params }) => {
-    console.log("Params:", params);
+    console.log('Params:', params);
     return { someVariable: 'foobar' };
   },
-  
+
   // If the query contains `_seoMetaTags`, you can use this function to
   // automatically associate them with the route's metadata.
   pickSeoMetaTags: (data) => data.page?._seoMetaTags,
